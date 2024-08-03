@@ -50,6 +50,22 @@ while true; do
     echo "It's lower than that, guess again:"
   # if input is successful
   else
+    
+    # increment number of tries
+    (( NUMBER_OF_GUESSES++ ))
+    # get username id
+    USERNAME_ID=$($PSQL "SELECT username_id FROM usernames WHERE username='$USERNAME' OR username='$EXISTING_USERNAME'")
+    # insert new game result
+    INSERT_GAME_RESULT=$($PSQL "INSERT INTO game_history(username_id, number_of_guesses) VALUES($USERNAME_ID, $NUMBER_OF_GUESSES)")
+    # get count of games played
+    GAMES_PLAYED=$($PSQL "SELECT COUNT(*) FROM game_history WHERE username_id=$USERNAME_ID")
+    # insert games played
+    INSERT_GAMES_PLAYED_RESULT=$($PSQL "UPDATE usernames SET games_played=$GAMES_PLAYED WHERE username_id=$USERNAME_ID")
+    # get best game
+    BEST_GAME=$($PSQL "SELECT MIN(number_of_guesses) FROM game_history WHERE username_id=$USERNAME_ID")
+    # insert best game
+    INSERT_BEST_GAME_RESULT=$($PSQL "UPDATE usernames SET best_game=$BEST_GAME WHERE username_id=$USERNAME_ID")
+    
     echo "You guessed it in $NUMBER_OF_GUESSES tries. The secret number was $SECRET_NUMBER. Nice job!"
     break
   fi
@@ -60,12 +76,3 @@ while true; do
   read NUMBER
   
 done
-
-# get username id
-USERNAME_ID=$($PSQL "SELECT username_id FROM usernames WHERE username='$USERNAME' OR username='$EXISTING_USERNAME'")
-# insert new game result
-INSERT_GAME_RESULT=$($PSQL "INSERT INTO game_history(username_id, number_of_guesses) VALUES($USERNAME_ID, $NUMBER_OF_GUESSES)")
-
-
-# TEMPORARY TRUNCATE TABLE!!!!
-## echo $($PSQL "TRUNCATE TABLE game_history, usernames RESTART IDENTITY CASCADE")
