@@ -1,0 +1,143 @@
+    1  mkdir number_guessing_game
+    2  touch number_guess.sh
+    3  cd number_guessing_game
+    4  chmod +x number_guess.sh
+    5  chmod +x number_guess.sh
+    6  git init
+    7  git status
+    8  git branch
+    9  git branch
+   10  git status
+   11  git config --global init.defaultBranch main
+   12  git branch
+   13  git status
+   14  git branch -m main
+   15  git branch
+   16  git status
+   17  git add .
+   18  git commit -m "Initial commit"
+   19  git status
+   20  git branch
+   21  git log
+   22  ./number_guess.sh
+   23  pg_dump -cC --inserts -U freecodecamp number_guess > number_guess.sql
+   24  git status
+   25  git branch
+   26  git add .
+   27  git status
+   28  git commit -m 'feat: added sql database & edited number guess script'
+   29  git status
+   30  git branch
+   31  psql --username=freecodecamp --dbname=postgres
+   32  git status
+   33  psql -U postgres < number_guess.sql
+   34  cd number_guessing_game
+   35  git status
+   36  psql -U postgres < number_guess.sql
+   37  git status
+   38  \d
+   39  \l
+   40  git status
+   41  git log --oneline
+   42  git status
+   43  git status
+   44  git branch
+   45  git status
+   46  git add .
+   47  git commit -m 'feat:added lines in database'
+   48  git status
+   49  git branch
+   50  git log --oneline
+   51  ./number_guess.sh
+   52  ./number_guess.sh
+   53  ./number_guess.sh
+   54  ./number_guess.sh
+   55  echo $(( 1 + 1 ))
+   56  echo $( 1 + 1 )
+   57  echo $(( 12312 + 2312 ))
+   58  echo $($PSQL 'SELECT * FROM usernames;')
+   59  echo $($PSQL "SELECT * FROM usernames;")
+   60  ./number_guess.sh
+   61  ./number_guess.sh
+   62  pg_dump -cC --inserts -U freecodecamp number_guess > number_guess.sql
+   63  ./number_guess.sh
+   64  ./number_guess.sh
+   65  ./number_guess.sh
+   66  ./number_guess.sh
+   67  ./number_guess.sh
+   68  ./number_guess.sh
+   69  ./number_guess.sh
+   70  ./number_guess.sh
+   71  ./number_guess.sh
+   72  ./number_guess.sh
+   73  ./number_guess.sh
+   74  ./number_guess.sh
+   75  ./number_guess.sh
+   76  ./number_guess.sh
+   77  ./number_guess.sh
+   78  ./number_guess.sh
+   79  ./number_guess.sh
+   80  ./number_guess.sh
+   81  ./number_guess.sh
+   82  ./number_guess.sh
+   83  ./number_guess.sh
+   84  pg_dump -cC --inserts -U freecodecamp number_guess > number_guess.sql
+   85  git status
+   86  git branch
+   87  git checkout -b feat/edited-script
+   88  git branch -d feat/edited-script
+   89  git checkout main
+   90  git branch -d feat/edited-script
+   91  git branch
+   92  git checkout -b feat/edited-script-and-database
+   93  git checkout main
+   94  git branch -d feat/edited-script-and-database
+   95  git branch
+   96  git checkout -b feat/edited-number-guess-script
+   97  git branch
+   98  git add .
+   99  git commit -m "feat: edited number guess script"
+  100  git status
+  101  git branch
+  102  git checkout main
+  103  git merge feat/edited-number-guess-script
+  104  git status
+  105  git branch
+  106  git branch -d feat/edited-number-guess-script
+  107  -git log --oneline
+  108  git log --oneline
+  109  git rebase --interactive --root
+  110  git log --oneline
+  111  git branch
+  112  git status
+  113  git branch
+  114  psql --username=freecodecamp --dbname=postgres
+  115  psql -U postgres < number_guess.sql
+  116  cd number_guessing_game
+  117  psql -U postgres < number_guess.sql
+  118  git branch
+  119  git status
+  120  git log --oneline
+  121  ./number_guess.sh
+  122  ./number-guess.sh
+  123  ./number_guess.sh
+  124  ./number_guess.sh
+  125  ./number_guess.sh
+  126  ./number_guess.sh
+  127  git branch
+  128  git status
+  129  git add .
+  130  git commit -m 'feat: finalized number guess script'
+  131  git status
+  132  git branch
+  133  git status
+  134  git log --oneline
+  135  git remote add origin https://github.com/thomascansino/P56-Guess-The-Number-Database.git
+  136  git branch -M main
+  137  git push -u origin main
+  138  git status
+  139  ./number_guess.sh
+  140  psql --username=freecodecamp --dbname=postgres
+  141  history 
+  142  cd number_guessing_game
+  143  history > commands.txt
