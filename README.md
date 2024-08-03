@@ -7,6 +7,6 @@ Project Info:
 - Created a database in PSQL to store:
     - usernames of player
     - number of games played per player
-    - minimum number of guesses per player
+    - fewest guesses per player
     - history of all games (how many guesses it took per game & the username of the player)
  - Used Git for version control
